@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arknights Hangman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/start-page.css">
+  <link rel="stylesheet" href="./assets/css/game-page.css">
+</head>
+
+<body class="container">
+
+  <header class="header">
+    <img class="header__img" src="./assets/img/Ch'en.svg" alt="character-image">
+    <div class="header__info">
+      <h3>Clues</h3>
+      <p class="info__class">Class: <span class="class__text">Caster</span></p>
+      <p class="info__faction">Faction: <span class="faction__text">Rhodes Island</span></p>
+    </div>
+  </header>
+
+  <main class="board">
+    <div class="platform">
+      <img class="platform__ground" src="./assets/img/hangman/platform.svg" alt="image-platform">
+      <img class="platform__vertical" src="./assets/img/hangman/vertical.svg" alt="">
+      <img class="platform__horizontal" src="./assets/img/hangman/horizontal.svg" alt="">
+      <img class="platform__rope" src="./assets/img/hangman/rope.svg" alt="">
+      <div class="hangman">
+        <img src="./assets/img/hangman/head.svg" alt="" class="hangman__head">
+        <img src="./assets/img/hangman/body.svg" alt="" class="hangman__body">
+        <img src="./assets/img/hangman/left-arm.svg" alt="" class="hangman__left-arm">
+        <img src="./assets/img/hangman/right-arm.svg" alt="" class="hangman__right-arm">
+        <img src="./assets/img/hangman/left-leg.svg" alt="" class="hangman__left-leg">
+        <img src="./assets/img/hangman/right-leg.svg" alt="" class="hangman__right-leg">
+      </div>
+    </div>
+    <div class="input">
+      <input class="input__text" type="text" name="" id="inputText" placeholder="Enter text" autofocus>
+      <span class="input__warning" id="inputWarning">Only uppercase letters</span>
+    </div>
+    <div class="letters">
+      <span class="letters__character">w</span>
+      <span class="letters__character">r</span>
+      <span class="letters__character">o</span>
+      <span class="letters__character">n</span>
+      <span class="letters__character">g</span>
+    </div>
+  </main>
+  <footer class="attribution">
+    <p class="attribution__text">Oracle ONE - Challenge by <a href="https://github.com/FrancoGL"
+        class="attribution__link" target="_blank">FrancoGL</a></p>
+  </footer>
+  <script src="./assets/js/game.js"></script>
+</body>
+
+</html>
