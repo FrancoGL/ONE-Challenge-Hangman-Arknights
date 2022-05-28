@@ -1,0 +1,205 @@
+:root {
+  --bg-color: #0f0f10;
+  --font-color: #fff;
+  --font-principal: "Roboto", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --btn-border-color: #fff;
+  --link-color: #b1b3b2;
+  --bg-input: #54655d;
+  --font-warning-color: red;
+}
+
+.container {
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__img {
+  display: block;
+  width: 50%;
+}
+
+.header__info {
+  font-family: var(--font-secondary);
+  color: var(--font-color);
+  text-align: right;
+}
+
+/** Platform **/
+.platform {
+  margin: 0 auto;
+  position: relative;
+  width: 327px;
+  height: 324.08px;
+}
+
+.platform__ground {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+
+.platform__vertical {
+  position: absolute;
+  height: 90%;
+  top: 2rem;
+  left: 1rem;
+}
+
+.platform__horizontal {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+}
+
+.platform__rope {
+  position: absolute;
+  top: 2rem;
+  left: 12rem;
+}
+
+/** Hangman **/
+
+.hangman__head {
+  position: absolute;
+  width: 15%;
+  top: 5rem;
+  left: 10.7rem;
+}
+
+.hangman__body {
+  position: absolute;
+  height: 30%;
+  top: 8rem;
+  left: 12rem;
+}
+
+.hangman__left-arm {
+  position: absolute;
+  width: 10%;
+  top: 8.4rem;
+  left: 10.2rem;
+}
+
+.hangman__right-arm {
+  position: absolute;
+  width: 10%;
+  top: 8.4rem;
+  left: 12rem;
+}
+
+.hangman__left-leg {
+  position: absolute;
+  width: 10%;
+  top: 14rem;
+  left: 10.2rem;
+}
+
+.hangman__right-leg {
+  position: absolute;
+  width: 10%;
+  top: 14rem;
+  left: 12rem;
+}
+
+/** Input **/
+
+.input {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-secondary);
+  color: var(--font-color);
+}
+
+.input__text {
+  margin-top: 1rem;
+  outline: none;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: inherit;
+}
+
+.input__warning {
+  margin: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.input__warning--highlight {
+  color: var(--font-warning-color);
+}
+
+/** Letters **/
+
+.letters {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  font-family: var(--font-principal);
+  font-size: 1.5rem;
+  color: var(--font-color);
+}
+
+.letters__character {
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+
+  .header__info {
+    font-size: 1.7rem;
+  }
+
+  .input {
+    font-size: 1.5rem;
+  }
+
+  .input__warning {
+    font-size: 1rem;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .letters {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .container {
+    padding-top: 0.5rem;
+  }
+
+  .header {
+    justify-content: space-evenly;
+  }
+
+  .header__img {
+    width: 15%;
+  }
+
+  .header__info {
+    font-size: 1.3rem;
+  }
+
+  .input {
+    font-size: 1.2rem;
+  }
+
+  .input__warning {
+    font-size: 1rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .letters {
+    font-size: 3rem;
+  }
+}

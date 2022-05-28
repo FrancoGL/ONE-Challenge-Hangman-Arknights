@@ -66,6 +66,11 @@
   border-radius: 1.2rem;
 }
 
+.btn--link {
+  text-align: center;
+  text-decoration: none;
+}
+
 /** Attribution **/
 
 .attribution {
@@ -88,4 +93,22 @@
 
 .attribution__link:active {
   color: var(--link-color);
+}
+
+@media screen and (min-width: 768px) {
+  
+  .header__title {
+    font-size: 3rem;
+  }
+
+  .group__btn {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .btns__img {
+    width: 20%;
+  }
 }
