@@ -5,22 +5,16 @@ let btnCancel = document.getElementById("btn-cancel");
 let inputOperator = document.getElementById("operator");
 let inputClass = document.getElementById("class")
 let inputFaction = document.getElementById("faction")
-const values = []
+const words = []
 
 btnAddNewWord.addEventListener("click", ()=> {
   modal.classList.remove("hidden");
 })
 
-const check_inputs = (input)=> {
-  if (input.value.length < 2) {
-    input.value = "Invalid" + input.name
-  }
-}
-
 btnAdd.addEventListener("click", ()=> {
-  values.push(inputOperator.value, inputClass.value, inputFaction.value)
+  words.push(inputOperator.value, inputClass.value, inputFaction.value)
   modal.classList.add("hidden")
-  console.log(values)
+  console.log(words)
 })
 
 btnCancel.addEventListener("click", ()=> {
