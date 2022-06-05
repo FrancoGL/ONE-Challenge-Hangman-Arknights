@@ -14,7 +14,7 @@ const deleteInvalidValue = () => {
   inputTextElement.value = inputTextElement.value.replaceAll(/[a-z]|\d|\W/g, "");
 }
 
-export const check_input = (eventInput) => {
+export const checkInput = (eventInput) => {
 
   if (eventInput.data !== null && eventInput.data.toString().match(regex) !== null) {
       deleteInvalidValue()

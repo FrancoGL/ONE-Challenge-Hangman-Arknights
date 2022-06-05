@@ -196,4 +196,8 @@
   .btn__group {
     cursor: pointer;
   }
+
+  .btn--form {
+    cursor: pointer;
+  }
 }
