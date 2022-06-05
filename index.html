@@ -21,7 +21,28 @@
     <img src="./assets/img/silence.png" alt="Silence, Arknights character" class="btns__img">
     <div class="btns__group">
       <a href="./game-page.html" class="group__btn btn--link" id="btn-start">Start Game</a>
-      <a class="group__btn btn--link">Add new word</a>
+      <a class="group__btn btn--link" id="btn-new">Add new word</a>
+    </div>
+
+    <div class="modal m__hidden" id="modal">
+      <div class="form__container">
+        <img class="container__img" src="./assets/img/operator5.png" alt="" srcset="">
+        <form class="form" onsubmit="return false;">
+          <label class="label" for="operator">Operator</label>
+          <input class="input" type="text" name="operator" id="operator" required>
+
+          <label class="label" for="class">Class</label>
+          <input class="input" type="text" name="class" id="class" required>
+
+          <label class="label" for="faction">Faction</label>
+          <input class="input" type="text" name="faction" id="faction" required>
+
+          <div class="btns__group--form">
+            <button class="btn--form" id="btn-add">Add</button>
+            <button class="btn--form" id="btn-cancel" type="button">Cancel</button>
+          </div>
+        </form>
+      </div>
     </div>
   </main>
   <footer class="attribution">
@@ -29,5 +50,5 @@
         class="attribution__link" target="_blank">FrancoGL</a></p>
   </footer>
 </body>
-<script src="./assets/js/script1.js" type="module"></script>
+<script src="./assets/js/add.js" type="module"></script>
 </html>

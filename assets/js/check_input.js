@@ -20,7 +20,7 @@ export const check_input = (eventInput) => {
       deleteInvalidValue()
       setWarning()
       return true
-  } else {
+  } else {  
     return false;
   }
 

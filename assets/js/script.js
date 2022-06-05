@@ -8,11 +8,14 @@ let header_img = document.getElementById("header-img");
 let modal = document.getElementById("modal");
 let modal_win = document.getElementById("modal-win");
 let answer = document.getElementById("answer");
+
+let wrong = ""
+
 const images = [
   "./assets/img/surt.png",
   "./assets/img/operator2.png",
-  "./assets/img/specter2.png",
   "./assets/img/operator4.png",
+  "./assets/img/specter2.png",
   "./assets/img/operator3.png",
 ];
 
@@ -30,6 +33,7 @@ let childs = lettersContainer.childNodes;
 let word;
 
 const replace = (event) => {
+
   if (word.includes(event.data)) {
     let index = word.indexOf(event.data);
     word.splice(index, 1, " ");
@@ -42,11 +46,26 @@ const replace = (event) => {
       modal_win.classList.remove("m__hidden");
     }
   } else {
-    if (position != elements.length - 1) {
-      header_img.src = images[position];
+
+    if (!wrong.includes(event.data) && event.inputType != "deleteContentBackward") {
+      if (position != elements.length - 1) {
+        header_img.src = images[position];
+      }
+      
+      elements[position].classList.remove("hidden");
+      position++;
+    } else {
+      wrong += inputTextElement.value
     }
-    elements[position].classList.remove("hidden");
-    position++;
+
+    // deleteContentBackward. inputType
+    // if (position != elements.length - 1) {
+    //   header_img.src = images[position];
+    // }
+    
+    // elements[position].classList.remove("hidden");
+    // position++;
+
     if (position == elements.length) {
       answer.innerHTML = word.join("");
       modal.classList.remove("m__hidden");
@@ -56,10 +75,14 @@ const replace = (event) => {
 
 // Check input
 inputTextElement.addEventListener("input", (inputText) => {
+  console.log(inputText.inputType);
   let state = check_input(inputText);
   if (!state) {
 
     replace(inputText);
+
+    let lettersWrong = new Set(inputTextElement.value)
+    inputTextElement.value = Array.from(lettersWrong).join("");
   }
 
   console.log(childs[0].textContent);
