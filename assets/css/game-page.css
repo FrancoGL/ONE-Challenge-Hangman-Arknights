@@ -25,6 +25,10 @@
   width: 50%;
 }
 
+.info__title {
+  margin-top: 0;
+}
+
 .header__info {
   font-family: var(--font-secondary);
   color: var(--font-color);
@@ -36,7 +40,7 @@
   margin: 0 auto;
   position: relative;
   width: 327px;
-  height: 324.08px;
+  height: 315px;
 }
 
 .platform__ground {
@@ -108,6 +112,10 @@
   left: 12rem;
 }
 
+.hidden {
+  display: none
+}
+
 /** Input **/
 
 .input {
@@ -120,15 +128,16 @@
 }
 
 .input__text {
+  width: 40%;
   margin-top: 1rem;
   outline: none;
   border: 1px solid #fff;
   background-color: transparent;
-  color: inherit;
+  color: var(--font-warning-color);
 }
 
 .input__warning {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   font-size: 0.8rem;
 }
 
@@ -148,11 +157,21 @@
 }
 
 .letters__character {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
   border-bottom: 1px solid #fff;
   text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
+
+  .header {
+    justify-content: space-evenly;
+  }
+
+  .header__img {
+    width: 30%;
+  }
 
   .header__info {
     font-size: 1.7rem;
@@ -172,10 +191,64 @@
   }
 }
 
+.modal {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
+}
+
+.status {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: var(--font-principal);
+  color: var(--font-color);
+  background-color: #0f0f10;
+  border: 1px solid var(--btn-border-color)
+}
+
+.status__img {
+  width: 40%;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.btn {
+  display: block;
+  width: 50%;
+  padding: 1rem 2rem;
+  font-family: var(--font-secondary);
+  color: var(--font-color);
+  border: 1px solid var(--btn-border-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+.m__hidden {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
 
   .container {
-    padding-top: 0.5rem;
+    padding-top: 0.2rem;
   }
 
   .header {
