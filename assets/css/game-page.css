@@ -40,7 +40,7 @@
   margin: 0 auto;
   position: relative;
   width: 327px;
-  height: 315px;
+  height: 300px;
 }
 
 .platform__ground {
@@ -101,24 +101,25 @@
 .hangman__left-leg {
   position: absolute;
   width: 10%;
-  top: 14rem;
+  top: 13.5rem;
   left: 10.2rem;
 }
 
 .hangman__right-leg {
   position: absolute;
   width: 10%;
-  top: 14rem;
+  top: 13.5rem;
   left: 12rem;
 }
 
 .hidden {
-  display: none
+  display: none;
 }
 
 /** Input **/
 
-.input {
+.input__container {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -162,9 +163,45 @@
   border-bottom: 1px solid #fff;
   text-transform: uppercase;
 }
+/** Modal **/
+
+.status {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: var(--font-principal);
+  color: var(--font-color);
+  background-color: #0f0f10;
+  border: 1px solid var(--btn-border-color);
+}
+
+.status__img {
+  width: 40%;
+}
+
+.btn__group {
+  width: 100%;
+}
+
+.btn {
+  display: block;
+  width: 50%;
+  padding: 1rem 2rem;
+  font-family: var(--font-secondary);
+  color: var(--font-color);
+  border: 1px solid var(--btn-border-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+.modal--hidden {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
-
   .header {
     justify-content: space-evenly;
   }
@@ -189,64 +226,19 @@
   .letters {
     font-size: 2rem;
   }
-}
 
-.modal {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4);
-}
+  .status {
+    width: 55%;
+  }
 
-.status {
-  width: 50%;
-  margin: 0 auto;
-  padding: 1rem;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  font-family: var(--font-principal);
-  color: var(--font-color);
-  background-color: #0f0f10;
-  border: 1px solid var(--btn-border-color)
-}
-
-.status__img {
-  width: 40%;
-}
-
-.btns {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
-.btn {
-  display: block;
-  width: 50%;
-  padding: 1rem 2rem;
-  font-family: var(--font-secondary);
-  color: var(--font-color);
-  border: 1px solid var(--btn-border-color);
-  text-align: center;
-  text-decoration: none;
-}
-
-.m__hidden {
-  display: none;
+  .btn__group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-
   .container {
     padding-top: 0.2rem;
   }
