@@ -30,13 +30,16 @@
         <form class="form" onsubmit="return false;">
           <label class="label" for="operator">Operator</label>
           <input class="input" type="text" name="operator" id="operator" required>
+          <span class="warning warning--hidden" id="operator--warning">Only uppercase letters</span>
 
           <label class="label" for="class">Class</label>
           <input class="input" type="text" name="class" id="class" required>
+          <span class="warning warning--hidden" id="class--warning">Only uppercase letters</span>
 
           <label class="label" for="faction">Faction</label>
           <input class="input" type="text" name="faction" id="faction" required>
-
+          <span class="warning warning--hidden" id="faction--warning">Only uppercase letters</span>
+          
           <div class="btn__group--form">
             <button class="btn--form" id="btn-add" type="button">Add</button>
             <button class="btn--form" id="btn-cancel" type="button">Cancel</button>
@@ -46,9 +49,12 @@
     </div>
   </main>
   <footer class="attribution">
-    <p>Oracle ONE - Challenge by <a href="https://github.com/FrancoGL"
-        class="attribution__link" target="_blank">FrancoGL</a></p>
+    <p>Oracle ONE - Challenge by <a href="https://github.com/FrancoGL" class="attribution__link"
+        target="_blank">FrancoGL</a></p>
+    <p>All trademarks, character and/or image used in this page are the copyrighted property of their respective
+      owners.</p>
   </footer>
 </body>
 <script src="./assets/js/add_new_word.js" type="module"></script>
+
 </html>

@@ -101,31 +101,31 @@
 .hangman__left-leg {
   position: absolute;
   width: 10%;
-  top: 14rem;
+  top: 13.5rem;
   left: 10.2rem;
 }
 
 .hangman__right-leg {
   position: absolute;
   width: 10%;
-  top: 14rem;
+  top: 13.5rem;
   left: 12rem;
 }
 
 .hidden {
-  display: none
+  display: none;
 }
 
 /** Input **/
 
 .input__container {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   font-family: var(--font-secondary);
   color: var(--font-color);
-  
 }
 
 .input__text {
@@ -202,7 +202,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .header {
     justify-content: space-evenly;
   }
@@ -240,7 +239,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-
   .container {
     padding-top: 0.2rem;
   }
