@@ -13,6 +13,7 @@ let inputFaction = document.getElementById("faction");
 let warningOperator = document.getElementById("operator--warning");
 let warningClass = document.getElementById("class--warning");
 let warningFaction = document.getElementById("faction--warning");
+let warningEmpty = document.getElementById("empty--warning");
 
 const showModal = () => {
   if (btnAddNewWord != null) {
@@ -27,15 +28,22 @@ const showModal = () => {
 const addWord = () => {
   if (btnAdd != null) {
     btnAdd.addEventListener("click", () => {
-      words.push(
-        generate_character(
-          inputOperator.value,
-          inputClass.value,
-          inputFaction.value
-        )
-      );
-      localStorage.setItem("words", JSON.stringify(words));
-      modal.classList.add("hidden");
+      if (inputOperator.value != "" && inputClass.value != "" && inputOperator.value != "") {
+        words.push(
+          generate_character(
+            inputOperator.value,
+            inputClass.value,
+            inputFaction.value
+          )
+        );
+        localStorage.setItem("words", JSON.stringify(words));
+        modal.classList.add("hidden");
+      } else {
+        warningEmpty.classList.remove("warning--hidden");
+        setTimeout(() => {
+          warningEmpty.classList.add("warning--hidden");
+        }, 2000)
+      }
     });
   }
 };
@@ -94,6 +102,6 @@ const hiddenModal = () => {
   }
 };
 
-inputEvent();
 showModal();
+inputEvent();
 hiddenModal();

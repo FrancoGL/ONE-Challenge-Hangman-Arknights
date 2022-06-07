@@ -21,7 +21,7 @@
     <img class="main__img" src="./assets/img/silence.png" alt="Silence, Arknights character">
     <div class="btn__group">
       <a class="group__btn btn--link" id="btn-start" href="./game-page.html">Start Game</a>
-      <a class="group__btn btn--link" id="btn-new">Add new word</a>
+      <a class="group__btn btn--link" id="btn-new">Add operator</a>
     </div>
 
     <div class="modal hidden" id="modal">
@@ -29,16 +29,17 @@
         <img class="container__img" src="./assets/img/operator5.png" alt="" srcset="">
         <form class="form" onsubmit="return false;">
           <label class="label" for="operator">Operator</label>
-          <input class="input" type="text" name="operator" id="operator" required>
+          <input class="input" type="text" name="operator" id="operator" placeholder="Operator name" required>
           <span class="warning warning--hidden" id="operator--warning">Only uppercase letters</span>
 
           <label class="label" for="class">Class</label>
-          <input class="input" type="text" name="class" id="class" required>
+          <input class="input" type="text" name="class" id="class" placeholder="Operator class" required>
           <span class="warning warning--hidden" id="class--warning">Only uppercase letters</span>
 
           <label class="label" for="faction">Faction</label>
-          <input class="input" type="text" name="faction" id="faction" required>
+          <input class="input" type="text" name="faction" id="faction" placeholder="Operator faction" required>
           <span class="warning warning--hidden" id="faction--warning">Only uppercase letters</span>
+          <span class="warning warning--hidden" id="empty--warning">Complete empty fields</span>
           
           <div class="btn__group--form">
             <button class="btn--form" id="btn-add" type="button">Add</button>
