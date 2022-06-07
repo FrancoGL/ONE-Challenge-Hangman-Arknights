@@ -42,27 +42,37 @@ const showLoseWindow = (count, hangmanSize) => {
   }
 };
 
+// Change image correct
+const changeImageCorrect = () => {
+  headerImg.src = images[0];
+};
+
 // Add Correct Letter
 let childGroup = lettersContainer.childNodes;
 let letterCount = 0;
+let correctLetter = [];
 const addCorrectLetter = (event) => {
-  let index = word.indexOf(event.data);
-  word.splice(index, 1, " ");
-  inputTextElement.value = inputTextElement.value.replace(event.data, "");
-  childGroup[index + 1].textContent = event.data;
-  letterCount++;
-  showWinWindow(letterCount);
+  if (correctLetter.includes(event.data)) {
+    inputTextElement.value = inputTextElement.value.replace(event.data, "");
+  } else {
+    for (let i = 0; i < word.length; i++) {
+      if (word[i] === event.data) {
+        let index = i;
+        correctLetter.push(event.data);
+        inputTextElement.value = inputTextElement.value.replace(event.data, "");
+        childGroup[index + 1].textContent = event.data;
+        letterCount++;
+        showWinWindow(letterCount);
+        changeImageCorrect()
+      }
+    }
+  }
 };
 
 // Change image incorrect
 let headerImg = document.getElementById("header-img");
 const changeImageIncorrect = () => {
   headerImg.src = images[1];
-};
-
-// Change image correct
-const changeImageCorrect = () => {
-  headerImg.src = images[0];
 };
 
 // Add hangman elements
@@ -95,7 +105,6 @@ const checkWrongLetter = (letter) => {
 const checkIfContainsLetter = (input) => {
   if (word.includes(input.data)) {
     addCorrectLetter(input);
-    changeImageCorrect();
   } else {
     if (!checkWrongLetter(input.data)) {
       wrongsLetter.add(input.data);
