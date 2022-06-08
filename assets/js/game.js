@@ -63,7 +63,7 @@ const addCorrectLetter = (event) => {
         childGroup[index + 1].textContent = event.data;
         letterCount++;
         showWinWindow(letterCount);
-        changeImageCorrect()
+        changeImageCorrect();
       }
     }
   }
@@ -116,6 +116,13 @@ const checkIfContainsLetter = (input) => {
 
 // Check input
 const checkInputEvent = () => {
+
+  inputTextElement.addEventListener("keydown", (event) => {
+    if (event.key === "Backspace") {
+      event.preventDefault()
+    }
+  })
+
   inputTextElement.addEventListener("input", (inputText) => {
     let state = checkInput(inputText);
     if (!state) {
