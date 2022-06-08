@@ -24,7 +24,7 @@ const showModal = () => {
 };
 
 // Get Words
-
+let info = document.getElementById("info");
 const addWord = () => {
   if (btnAdd != null) {
     btnAdd.addEventListener("click", () => {
@@ -38,6 +38,10 @@ const addWord = () => {
         );
         localStorage.setItem("words", JSON.stringify(words));
         modal.classList.add("hidden");
+        info.classList.remove("info--hidden");
+        setTimeout(() => {
+          info.classList.add("info--hidden");
+        }, 2000)
       } else {
         warningEmpty.classList.remove("warning--hidden");
         setTimeout(() => {

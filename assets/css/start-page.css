@@ -47,6 +47,16 @@
   width: 50%;
 }
 
+.info {
+  margin-top: 1rem;
+  font-family: var(--font-secondary);
+  color: greenyellow;
+}
+
+.info--hidden {
+  display: none;
+}
+
 .btn__group {
   display: flex;
   flex-flow: column nowrap;
