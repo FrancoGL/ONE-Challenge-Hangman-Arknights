@@ -1,83 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arknights Hangman</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Play:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Reset and normalize -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/start-page.css" />
+    <link rel="stylesheet" href="./assets/css/game-page.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arknights Hangman</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/start-page.css">
-  <link rel="stylesheet" href="./assets/css/game-page.css">
-</head>
-
-<body class="container">
-
-  <header class="header">
-    <img class="header__img" id="header-img" src="https://c.tenor.com/5H996htYZAYAAAAd/dokutah-arknights.gif"
-      alt="character-image">
-    <div class="header__info">
-      <h3 class="info__title">Clues</h3>
-      <p>Class: <span class="class__text" id="class-text"></span></p>
-      <p>Faction: <span class="faction__text" id="faction-text"></span></p>
-    </div>
-  </header>
-
-  <main class="board">
-    <div class="platform">
-      <img class="platform__ground" src="./assets/img/hangman/platform.svg" alt="platform ground">
-      <img class="platform__vertical" src="./assets/img/hangman/vertical.svg" alt="platform vertical">
-      <img class="platform__horizontal" src="./assets/img/hangman/horizontal.svg" alt="platform horizontal">
-      <img class="platform__rope" src="./assets/img/hangman/rope.svg" alt="platform rope">
-      <div class="hangman">
-        <img src="./assets/img/hangman/head.svg" alt="head" class="hangman__head hidden" id="head">
-        <img src="./assets/img/hangman/body.svg" alt="body" class="hangman__body hidden" id="body">
-        <img src="./assets/img/hangman/left-arm.svg" alt="left arm" class="hangman__left-arm hidden" id="left-arm">
-        <img src="./assets/img/hangman/right-arm.svg" alt="right arm" class="hangman__right-arm hidden" id="right-arm">
-        <img src="./assets/img/hangman/left-leg.svg" alt="left leg" class="hangman__left-leg hidden" id="left-leg">
-        <img src="./assets/img/hangman/right-leg.svg" alt="right leg" class="hangman__right-leg hidden" id="right-leg">
+  <body class="container">
+    <header class="header">
+      <img
+        class="header__img"
+        id="header-img"
+        src="https://c.tenor.com/5H996htYZAYAAAAd/dokutah-arknights.gif"
+        alt="character-image"
+      />
+      <div class="header__info">
+        <h3 class="info__title">Clues</h3>
+        <p>Class: <span class="class__text" id="class-text"></span></p>
+        <p>Faction: <span class="faction__text" id="faction-text"></span></p>
       </div>
-    </div>
-    <div class="input__container">
-      <input class="input__text" type="text" name="" id="input-text" placeholder="Enter text" autofocus>
-      <span class="input__warning" id="input-warning">Only uppercase letters</span>
-    </div>
-    <div class="letters" id="letters-container">
-    </div>
+    </header>
 
-    <div class="modal modal--hidden" id="modal">
-      <div class="status">
-        <img src="./assets/img/specter.png" alt="" class="status__img">
-        <h1>Game Over</h1>
-        <p>Answer: <span class="character" id="answer"></span></p>
-        <div class="btn__group">
-          <a href="./game-page.html" class="btn">Start new game</a>
-          <a href="./index.html" class="btn">Home</a>
+    <main class="board">
+      <div class="platform">
+        <img
+          class="platform__ground"
+          src="./assets/img/hangman/platform.svg"
+          alt="platform ground"
+        />
+        <img
+          class="platform__vertical"
+          src="./assets/img/hangman/vertical.svg"
+          alt="platform vertical"
+        />
+        <img
+          class="platform__horizontal"
+          src="./assets/img/hangman/horizontal.svg"
+          alt="platform horizontal"
+        />
+        <img
+          class="platform__rope"
+          src="./assets/img/hangman/rope.svg"
+          alt="platform rope"
+        />
+        <div class="hangman">
+          <img
+            src="./assets/img/hangman/head.svg"
+            alt="head"
+            class="hangman__head hidden"
+            id="head"
+          />
+          <img
+            src="./assets/img/hangman/body.svg"
+            alt="body"
+            class="hangman__body hidden"
+            id="body"
+          />
+          <img
+            src="./assets/img/hangman/left-arm.svg"
+            alt="left arm"
+            class="hangman__left-arm hidden"
+            id="left-arm"
+          />
+          <img
+            src="./assets/img/hangman/right-arm.svg"
+            alt="right arm"
+            class="hangman__right-arm hidden"
+            id="right-arm"
+          />
+          <img
+            src="./assets/img/hangman/left-leg.svg"
+            alt="left leg"
+            class="hangman__left-leg hidden"
+            id="left-leg"
+          />
+          <img
+            src="./assets/img/hangman/right-leg.svg"
+            alt="right leg"
+            class="hangman__right-leg hidden"
+            id="right-leg"
+          />
         </div>
       </div>
-    </div>
+      <div class="input__container">
+        <input
+          class="input__text"
+          type="text"
+          name=""
+          id="input-text"
+          placeholder="Enter text"
+          autofocus
+        />
+        <span class="input__warning" id="input-warning"
+          >Only uppercase letters</span
+        >
+      </div>
+      <div class="letters" id="letters-container"></div>
 
-    <div class="modal modal--hidden" id="modal-win">
-      <div class="status">
-        <img src="./assets/img/operator.png" alt="" class="status__img">
-        <h1>You Win</h1>
-        <div class="btn__group">
-          <a href="./game-page.html" class="btn">Start new game</a>
-          <a href="./index.html" class="btn">Home</a>
+      <div class="modal modal--hidden" id="modal">
+        <div class="status">
+          <img src="./assets/img/specter.png" alt="" class="status__img" />
+          <h1>Game Over</h1>
+          <p>Answer: <span class="character" id="answer"></span></p>
+          <div class="btn__group">
+            <a href="./game-page.html" class="btn">Start new game</a>
+            <a href="./index.html" class="btn">Home</a>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer class="attribution">
-    <p class="attribution__text">Oracle ONE - Challenge by <a href="https://github.com/FrancoGL"
-        class="attribution__link" target="_blank">FrancoGL</a></p>
-    <p>All trademarks, character and/or image used in this page are the copyrighted property of their respective
-      owners.</p>
-  </footer>
-  <script src="./assets/js/game.js" type="module"></script>
-</body>
 
+      <div class="modal modal--hidden" id="modal-win">
+        <div class="status">
+          <img src="./assets/img/operator.png" alt="" class="status__img" />
+          <h1>You Win</h1>
+          <div class="btn__group">
+            <a href="./game-page.html" class="btn">Start new game</a>
+            <a href="./index.html" class="btn">Home</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution">
+      <p class="attribution__text">
+        Oracle ONE - Challenge by
+        <a
+          href="https://github.com/FrancoGL"
+          class="attribution__link"
+          target="_blank"
+          >FrancoGL</a
+        >
+      </p>
+      <p>
+        All trademarks, character and/or image used in this page are the
+        copyrighted property of their respective owners.
+      </p>
+    </footer>
+    <script src="./assets/js/game.js" type="module"></script>
+  </body>
 </html>

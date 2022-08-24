@@ -15,28 +15,53 @@
     <!-- Reset and normalize -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/start-page.css" />
   </head>
-
-  <body class="body">
-    <header class="header">
-      <h1 class="header__title">Arknights Hangman</h1>
-    </header>
-    <main class="main">
+  <body>
+    <main class="form__container">
       <img
-        class="main__img"
-        src="./assets/img/silence.png"
-        alt="Silence, Arknights character"
+        class="container__img"
+        src="./assets/img/operator5.png"
+        alt=""
+        srcset=""
       />
-      <div class="btn__container">
-        <button class="btn btn--start">
-          <a href="game-page.html" class="btn__link">Start Game</a>
-        </button>
-        <button class="btn btn-add">
-          <a href="add-operator.html" class="btn__link">Add operator</a>
-        </button>
-      </div>
+      <form class="form" onsubmit="return false;">
+        <label class="label" for="operator">Operator</label>
+        <input
+          class="input"
+          type="text"
+          name="operator"
+          id="operator"
+          placeholder="Operator name"
+          required
+        />
+
+        <label class="label" for="class">Class</label>
+        <input
+          class="input"
+          type="text"
+          name="class"
+          id="class"
+          placeholder="Operator class"
+          required
+        />
+
+        <label class="label" for="faction">Faction</label>
+        <input
+          class="input"
+          type="text"
+          name="faction"
+          id="faction"
+          placeholder="Operator faction"
+          required
+        />
+
+        <div class="btn__group--form">
+          <button class="btn--form" id="btn-add" type="button">Add</button>
+          <button class="btn--form" id="btn-cancel" type="button">
+            Cancel
+          </button>
+        </div>
+      </form>
     </main>
     <footer class="attribution">
       <p>
@@ -54,5 +79,4 @@
       </p>
     </footer>
   </body>
-  <script src="./assets/js/add_new_word.js" type="module"></script>
 </html>
