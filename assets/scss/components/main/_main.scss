@@ -1,0 +1,12 @@
+@use "../../config/colors" as color;
+@use "./btn__container";
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.main__img {
+  width: 50%;
+}

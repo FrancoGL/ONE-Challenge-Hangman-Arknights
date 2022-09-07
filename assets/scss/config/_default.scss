@@ -1,0 +1,7 @@
+@use "./colors" as color;
+
+.body {
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  background-color: color.$primary-color;
+}

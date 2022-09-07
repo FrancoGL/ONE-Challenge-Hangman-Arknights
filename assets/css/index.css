@@ -1,0 +1,53 @@
+.body {
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  background-color: #222831;
+}
+
+.header {
+  font-family: "Play", sans-serif;
+  font-size: 1.7rem;
+}
+
+.header__title {
+  text-align: center;
+  color: #fff;
+}
+
+.btn__container {
+  width: 70%;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+}
+.btn .btn__link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.main__img {
+  width: 50%;
+}
+
+.attribution {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}/*# sourceMappingURL=index.css.map */

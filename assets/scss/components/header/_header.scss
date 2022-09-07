@@ -1,0 +1,12 @@
+@use "../../config/colors" as color;
+@use "../../config/fonts" as font;
+
+.header {
+  font-family: font.$secondary-font;
+  font-size: 1.7rem;
+}
+
+.header__title {
+  text-align: center;
+  color: color.$primary-default-color;
+}
