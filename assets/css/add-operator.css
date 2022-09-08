@@ -1,0 +1,55 @@
+.body {
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  background-color: #222831;
+}
+
+.attribution {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.form__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.container__img {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.form .label {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.form .input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-align: center;
+}
+
+.btn__group--form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.btn__group--form .btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  color: #fff;
+}/*# sourceMappingURL=add-operator.css.map */
