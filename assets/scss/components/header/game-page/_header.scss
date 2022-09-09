@@ -1,0 +1,8 @@
+@use "./header__img";
+@use "./header__info";
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}

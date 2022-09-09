@@ -1,0 +1,73 @@
+.platform {
+  margin: 0 auto;
+  position: relative;
+  width: 327px;
+  height: 300px;
+
+  .platform__ground {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+  }
+  
+  .platform__vertical {
+    position: absolute;
+    height: 90%;
+    top: 2rem;
+    left: 1rem;
+  }
+  
+  .platform__horizontal {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+  }
+  
+  .platform__rope {
+    position: absolute;
+    top: 2rem;
+    left: 12rem;
+  }
+
+  .hangman__head {
+    position: absolute;
+    width: 15%;
+    top: 5rem;
+    left: 10.7rem;
+  }
+  
+  .hangman__body {
+    position: absolute;
+    height: 30%;
+    top: 8rem;
+    left: 12rem;
+  }
+  
+  .hangman__left-arm {
+    position: absolute;
+    width: 10%;
+    top: 8.4rem;
+    left: 10.2rem;
+  }
+  
+  .hangman__right-arm {
+    position: absolute;
+    width: 10%;
+    top: 8.4rem;
+    left: 12rem;
+  }
+  
+  .hangman__left-leg {
+    position: absolute;
+    width: 10%;
+    top: 13.5rem;
+    left: 10.2rem;
+  }
+  
+  .hangman__right-leg {
+    position: absolute;
+    width: 10%;
+    top: 13.5rem;
+    left: 12rem;
+  }
+}

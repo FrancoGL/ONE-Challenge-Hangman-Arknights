@@ -11,6 +11,11 @@
   line-height: 1.5;
 }
 
+.attribution__link {
+  color: #EEEEEE;
+  text-decoration: none;
+}
+
 .form__container {
   display: flex;
   flex-flow: column nowrap;

@@ -1,0 +1,23 @@
+@use "../../../config/colors" as color;
+
+.input__container {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__text {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.input__warning {
+  color: color.$warning-color;
+}
+
+.hidden {
+  display: none;
+}
