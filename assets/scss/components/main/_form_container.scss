@@ -48,3 +48,10 @@
     color: color.$primary-default-color;
   }
 }
+
+@media screen and (min-width: 768px){
+  
+  .container__img {
+    width: 40%;
+  }
+}

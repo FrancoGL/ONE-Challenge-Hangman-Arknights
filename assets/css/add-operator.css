@@ -57,4 +57,10 @@
   border: 1px solid #fff;
   border-radius: 1rem;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .container__img {
+    width: 40%;
+  }
 }/*# sourceMappingURL=add-operator.css.map */
