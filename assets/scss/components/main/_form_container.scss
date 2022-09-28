@@ -50,8 +50,13 @@
 }
 
 @media screen and (min-width: 768px){
-  
   .container__img {
     width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container__img {
+    width: 15%;
   }
 }

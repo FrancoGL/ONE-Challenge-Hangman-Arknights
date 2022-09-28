@@ -5,6 +5,7 @@
 }
 
 .attribution {
+  margin-top: 3rem;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: center;
@@ -62,5 +63,10 @@
 @media screen and (min-width: 768px) {
   .container__img {
     width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container__img {
+    width: 15%;
   }
 }/*# sourceMappingURL=add-operator.css.map */

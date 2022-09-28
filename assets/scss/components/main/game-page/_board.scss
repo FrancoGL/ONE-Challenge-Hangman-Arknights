@@ -1,6 +1,7 @@
 @use "../../../config/fonts" as font;
 @use "./platform";
 @use "./input__container";
+@use "./letters";
 @use "./modal";
 
 .board {

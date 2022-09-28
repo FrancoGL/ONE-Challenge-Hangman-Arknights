@@ -40,6 +40,15 @@
     width: 60%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .btn__container {
+    width: 25%;
+  }
+  .btn:hover {
+    background-color: #393E46;
+    transition: background-color 0.5s;
+  }
+}
 .main {
   display: flex;
   flex-flow: column nowrap;
@@ -55,7 +64,13 @@
     width: 40%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .main__img {
+    width: 20%;
+  }
+}
 .attribution {
+  margin-top: 3rem;
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: center;
