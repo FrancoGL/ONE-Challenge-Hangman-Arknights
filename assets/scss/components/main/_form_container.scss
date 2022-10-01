@@ -1,5 +1,6 @@
 @use "../../config/fonts" as font;
 @use "../../config/colors" as color;
+@use "../loader/loader";
 
 .form__container {
   display: flex;
