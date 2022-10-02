@@ -21,3 +21,10 @@ document.addEventListener("submit", (e) => {
   $loader.classList.remove("loader__hidden")
   create(config)
 })
+
+document.addEventListener("click", (e) => {
+
+  if (e.target.matches("#btn-cancel")) {
+    location.replace("../../../index.html")
+  }
+})
