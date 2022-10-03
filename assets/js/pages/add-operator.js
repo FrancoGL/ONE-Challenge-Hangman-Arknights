@@ -1,7 +1,7 @@
 import { options } from "../utils/options_ajax.js";
 import { buildData} from "../utils/build_data.js";
 import { buildHeaders } from "../utils/build_headers.js";
-import {create} from "../new_operator.js";
+import {create} from "../operations/new_operator.js";
 
 document.addEventListener("submit", (e) => {
 
