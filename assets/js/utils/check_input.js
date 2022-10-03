@@ -1,31 +1,10 @@
-export let inputTextElement = document.getElementById("input-text");
-let inputTextWarningElement = document.getElementById("input-warning");
-
-export let regex = new RegExp(/[a-z]|\d|\W/);
-
-const setWarning = () => {
-  inputTextWarningElement.classList.add("input__warning--highlight");
-  setTimeout(() => {
-    inputTextWarningElement.classList.remove("input__warning--highlight");
-  }, 2000);
-};
-
-const deleteInvalidValue = () => {
-  inputTextElement.value = inputTextElement.value.replaceAll(
-    /[a-z]|\d|\W/g,
-    ""
-  );
-};
-
+/**
+ * Check input, if it matches the RegExp pattern return true otherwise return false
+ * @param {Event} eventInput -> Event object containing the current input element 
+ * @returns {boolean}
+ */
 export const checkInput = (eventInput) => {
-  if (
-    eventInput.data !== null &&
-    eventInput.data.toString().match(regex) !== null
-  ) {
-    deleteInvalidValue();
-    setWarning();
-    return true;
-  } else {
-    return false;
-  }
+  let regex = new RegExp(/[a-z]|\d|\W/);
+  return (eventInput.data !== null &&
+    eventInput.data.toString().match(regex) !== null);
 };
