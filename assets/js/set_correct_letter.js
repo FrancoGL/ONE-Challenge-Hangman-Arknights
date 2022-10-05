@@ -1,19 +1,17 @@
-export const setCorrectLetter = (letterContainer, input) => {
-  const nodes = document.getElementById(letterContainer).childNodes
-  let operator = sessionStorage.getItem("operator").split('')
-  let letter = input
-  console.log(operator);
-  console.log(input);
-  if (operator.includes(letter)) {
-    
-    for (let i = 0; i < operator.length; i++) {
-      if (operator[i] === letter) {
-        nodes[i].textContent = letter
-        operator.splice(i, "")
-      }
-    }
+/**
+ * Add letter
+ * @param {HtmlElement} letterContainer 
+ * @param {String} operator 
+ * @param {CurrentInput} input 
+ */
+export const setCorrectLetter = (letterContainer, operator, input) => {
+  const nodes = document.getElementById(letterContainer).childNodes;
+  let operatorName = operator.toUpperCase().split("");
+  let letter = input;
 
-    //operator.splice(index, "")
-    //nodes[index].textContent = letter
+  for (let i = 0; i <= operatorName.length; i++) {
+    if (operatorName[i] === letter) {
+      nodes[i].textContent = letter;
+    }
   }
-}
+};
