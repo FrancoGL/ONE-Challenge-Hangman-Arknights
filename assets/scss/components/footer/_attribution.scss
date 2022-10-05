@@ -1,0 +1,15 @@
+@use "../../config/colors" as color;
+@use "../../config/fonts" as font;
+
+.attribution {
+  margin-top: 3rem;
+  font-family: font.$primary-font;
+  color: color.$primary-default-color;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.attribution__link {
+  color: color.$third-color;
+  text-decoration: none;
+}

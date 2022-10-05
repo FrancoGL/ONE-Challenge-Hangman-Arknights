@@ -1,0 +1,13 @@
+@use "../../../config/colors" as color;
+@use "../../../config/fonts" as font;
+
+.header__info {
+  font-family: font.$secondary-font;
+  color: color.$primary-default-color;
+}
+
+@media screen and (min-width: 768px){
+  .header__info {
+    font-size: 1.5rem;
+  }
+}

@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arknights Hangman</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Play:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Reset and normalize -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arknights Hangman</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/start-page.css">
-</head>
-
-<body class="container">
-  <header class="header">
-    <h1 class="header__title">Arknights Hangman</h1>
-  </header>
-  <main class="main">
-    <img class="main__img" src="./assets/img/silence.png" alt="Silence, Arknights character">
-    <span class="info info--hidden" id="info">Operator added!</span>
-    <div class="btn__group">
-      <a class="group__btn btn--link" id="btn-start" href="./game-page.html">Start Game</a>
-      <a class="group__btn btn--link" id="btn-new">Add operator</a>
-    </div>
-
-    <div class="modal hidden" id="modal">
-      <div class="form__container">
-        <img class="container__img" src="./assets/img/operator5.png" alt="" srcset="">
-        <form class="form" onsubmit="return false;">
-          <label class="label" for="operator">Operator</label>
-          <input class="input" type="text" name="operator" id="operator" placeholder="Operator name" required>
-          <span class="warning warning--hidden" id="operator--warning">Only uppercase letters</span>
-
-          <label class="label" for="class">Class</label>
-          <input class="input" type="text" name="class" id="class" placeholder="Operator class" required>
-          <span class="warning warning--hidden" id="class--warning">Only uppercase letters</span>
-
-          <label class="label" for="faction">Faction</label>
-          <input class="input" type="text" name="faction" id="faction" placeholder="Operator faction" required>
-          <span class="warning warning--hidden" id="faction--warning">Only uppercase letters</span>
-          <span class="warning warning--hidden" id="empty--warning">Complete empty fields</span>
-          
-          <div class="btn__group--form">
-            <button class="btn--form" id="btn-add" type="button">Add</button>
-            <button class="btn--form" id="btn-cancel" type="button">Cancel</button>
-          </div>
-        </form>
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Arknights Hangman</h1>
+    </header>
+    <main class="main">
+      <span class="created success-hidden">Operator Created</span>
+      <img
+        class="main__img"
+        src="./assets/img/silence.png"
+        alt="Silence, Arknights character"
+      />
+      <div class="btn__container">
+        <button class="btn btn--start">
+          <a href="game-page.html" class="btn__link">Start Game</a>
+        </button>
+        <button class="btn btn-add">
+          <a href="add-operator.html" class="btn__link">Add operator</a>
+        </button>
       </div>
-    </div>
-  </main>
-  <footer class="attribution">
-    <p>Oracle ONE - Challenge by <a href="https://github.com/FrancoGL" class="attribution__link"
-        target="_blank">FrancoGL</a></p>
-    <p>All trademarks, character and/or image used in this page are the copyrighted property of their respective
-      owners.</p>
-  </footer>
-</body>
-<script src="./assets/js/add_new_word.js" type="module"></script>
-
+    </main>
+    <footer class="attribution">
+      <p>
+        Oracle ONE - Challenge by
+        <a
+          href="https://github.com/FrancoGL"
+          class="attribution__link"
+          target="_blank"
+          >FrancoGL</a
+        >
+      </p>
+      <p>
+        All trademarks, character and/or image used in this page are the
+        copyrighted property of their respective owners.
+      </p>
+    </footer>
+  </body>
+  <script src="./assets/js/pages/index.js" type="module"></script>
 </html>

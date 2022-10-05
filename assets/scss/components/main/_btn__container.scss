@@ -1,0 +1,41 @@
+@use "../../config/colors" as color;
+@use "../../config/fonts" as font;
+
+.btn__container {
+  width: 70%;
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid color.$primary-default-color;
+  border-radius: 1rem;
+
+  .btn__link {
+    font-family: font.$primary-font;
+    font-size: 1.5rem;
+    color: color.$primary-default-color;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn__container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .btn__container {
+    width: 25%;
+  }
+
+  .btn:hover {
+    background-color: color.$secondary-color;
+    transition: background-color 0.5s;
+  }
+}

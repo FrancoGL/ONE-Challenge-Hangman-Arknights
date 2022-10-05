@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arknights Hangman</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Play:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Reset and normalize -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/add-operator.css">
+  </head>
+  <body class="body">
+    <main class="form__container">
+      <img
+        class="container__img"
+        src="./assets/img/operator5.png"
+        alt=""
+        srcset=""
+      />
+      <form class="form" onsubmit="return false;">
+        <label class="label" for="operator">Operator</label>
+        <input
+          class="input"
+          type="text"
+          name="operator"
+          id="operator"
+          placeholder="Operator name"
+          required
+        />
+
+        <label class="label" for="class">Class</label>
+        <input
+          class="input"
+          type="text"
+          name="class"
+          id="class"
+          placeholder="Operator class"
+          required
+        />
+
+        <label class="label" for="faction">Faction</label>
+        <input
+          class="input"
+          type="text"
+          name="faction"
+          id="faction"
+          placeholder="Operator faction"
+          required
+        />
+
+        <div class="btn__group--form">
+          <button class="btn" id="btn-add" type="submit">Add</button>
+          <button class="btn" id="btn-cancel" type="button">
+            Cancel
+          </button>
+        </div>
+      </form>
+      <div class="loader__container loader__hidden">
+        <span class="loader"></span>
+      </div>
+    </main>
+    <footer class="attribution">
+      <p>
+        Oracle ONE - Challenge by
+        <a
+          href="https://github.com/FrancoGL"
+          class="attribution__link"
+          target="_blank"
+          >FrancoGL</a
+        >
+      </p>
+      <p>
+        All trademarks, character and/or image used in this page are the
+        copyrighted property of their respective owners.
+      </p>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./assets/js/pages/add-operator.js" type="module"></script>
+</html>

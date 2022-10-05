@@ -1,0 +1,63 @@
+@use "../../config/fonts" as font;
+@use "../../config/colors" as color;
+@use "../loader/loader";
+
+.form__container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.container__img {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: font.$primary-font;
+
+  .label {
+    margin-bottom: 1rem;
+    color: color.$primary-default-color;
+  }
+
+  .input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    text-align: center;
+  }
+
+  
+}
+
+.btn__group--form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  
+  .btn {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid color.$primary-default-color;
+    border-radius: 1rem;
+    color: color.$primary-default-color;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .container__img {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container__img {
+    width: 15%;
+  }
+}

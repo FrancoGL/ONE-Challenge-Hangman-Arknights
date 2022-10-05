@@ -1,0 +1,24 @@
+@use "../../config/colors" as color;
+@use "./btn__container";
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.main__img {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .main__img {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__img {
+    width: 20%;
+  }
+}
